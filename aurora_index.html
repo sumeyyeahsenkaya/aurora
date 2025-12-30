@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURORA</title>
+  <meta name="description" content="AURORA • Modern Akdeniz mutfağı ve alkolsüz imza içecekler. QR ile menü." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aurora_style.css" />
+</head>
+
+<body>
+  <!-- Top progress (scroll indicator) -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Anasayfa">
+        <span class="brand__mark">MM</span>
+        <span class="brand__text">
+          <span class="brand__name">AURORA</span>
+          <span class="brand__tag">Akdeniz Mutfağı</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Site menüsü">
+        <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav__links" id="navLinks">
+          <a href="#about">Hakkında</a>
+          <a href="#gallery">Fotoğraflar</a>
+          <a href="#menu">Menü</a>
+          <a href="#info">Bilgi</a>
+          <button class="btn btn--ghost" id="langBtn" type="button" title="Dil değiştir">
+            TR
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg" style="--bg:url('assets/3.jpeg')"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge">
+          <span class="dot"></span>
+          <span>Mevsimsel tabaklar • İmza içecekler</span>
+        </div>
+
+        <h1 class="hero__title">Akdeniz’in zarafeti, masanızda.</h1>
+        <p class="hero__sub">
+          Mevsimsel ürünler, rafine sunumlar ve dingin bir atmosfer.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#menu">Menüyü Gör</a>
+          <a class="btn btn--glass" href="#about">Restoran Hakkında</a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="metaCard">
+            <div class="metaCard__label">Mutfak</div>
+            <div class="metaCard__value">Modern Akdeniz</div>
+          </div>
+          <div class="metaCard">
+            <div class="metaCard__label">Saat</div>
+            <div class="metaCard__value">11:00 – 00:00</div>
+          </div>
+</div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container twoCol">
+        <div class="twoCol__left">
+          <h2 class="section__title">Hakkında</h2>
+          <p class="lead">
+            AURORA; Akdeniz’in yalın lezzetlerini modern tekniklerle buluşturan,
+            sessiz şıklığı seven bir restoran.
+          </p>
+          <p class="text">
+            Zeytinyağı, narenciye, taze otlar ve deniz ürünleri merkezde.
+            Menü, mevsime göre küçük dokunuşlarla güncellenir.
+            Her tabak “az ama öz” anlayışıyla tasarlanır.
+          </p>
+<div class="actions">
+            <button class="btn btn--ghost" id="callBtn" type="button">📞 Ara</button>
+            <button class="btn btn--ghost" id="mapBtn" type="button">📍 Yol Tarifi</button>
+            <button class="btn btn--ghost" id="shareBtn" type="button">🔗 Paylaş</button>
+          </div>
+
+          <div class="note" id="toast" aria-live="polite"></div>
+        </div>
+
+        <div class="twoCol__right">
+          <div class="aboutCard">
+            <div class="aboutCard__img" style="--img:url('assets/1.jpeg')"></div>
+            <div class="aboutCard__img" style="--img:url('assets/2.jpeg')"></div>
+            <div class="aboutCard__img aboutCard__img--tall" style="--img:url('assets/3.jpeg')"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Restoran Fotoğrafları</h2>
+          <p class="section__desc">Işık, detay ve atmosfer.</p>
+        </div>
+
+        <div class="grid" id="grid">
+          <figure class="cardImg" data-src="assets/4.jpeg">
+            <img src="assets/4.jpeg" alt="Restoran fotoğrafı 1">
+          </figure>
+          <figure class="cardImg" data-src="assets/5.jpeg">
+            <img src="assets/5.jpeg" alt="Restoran fotoğrafı 2">
+          </figure>
+          <figure class="cardImg" data-src="assets/6.jpeg">
+            <img src="assets/6.jpeg" alt="Restoran fotoğrafı 3">
+          </figure>
+          <figure class="cardImg" data-src="assets/7.jpeg">
+            <img src="assets/7.jpeg" alt="Restoran fotoğrafı 4">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Menü</h2>
+          <p class="section__desc">Akdeniz Mutfağı • İçecekler</p>
+        </div>
+
+        <div class="menuTop">
+          <div class="tabs" role="tablist" aria-label="Menü kategorileri">
+            <button class="tab is-active" data-tab="med" role="tab" aria-selected="true">Akdeniz</button>
+            <button class="tab" data-tab="drinks" role="tab" aria-selected="false">İçecekler</button>
+          </div>
+</div>
+        </div>
+
+        <div class="menuWrap">
+          <div class="menuPanel is-active" id="panel-med" role="tabpanel">
+            <div class="menuGrid" id="menuMed"></div>
+          </div>
+
+          <div class="menuPanel" id="panel-drinks" role="tabpanel">
+            <div class="menuGrid" id="menuDrinks"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="section" id="info">
+      <div class="container info">
+        <div class="infoCard">
+          <h3>Adres</h3>
+          <p>Yeşilköy, İskele Cd. No:46 Bakırköy/İstanbul</p>
+          <p class="muted">Valet • Wi-Fi • Vegan seçenek • Alerjen bilgilendirme</p>
+        </div>
+        <div class="infoCard">
+          <h3>Rezervasyon</h3>
+          <p class="muted">Telefon veya WhatsApp üzerinden rezervasyon alıyoruz.</p>
+          <div class="infoBtns">
+            <a class="btn btn--primary btn--small" href="tel:+905000000000">Hemen Ara</a>
+            <a class="btn btn--ghost btn--small" href="https://wa.me/905000000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="infoCard">
+          <h3>Sosyal</h3>
+          <p class="muted">Yeni tabaklar ve etkinlikler için takip edin.</p>
+          <div class="infoBtns">
+            <a class="btn btn--ghost btn--small" href="#" onclick="return false;">Instagram</a>
+            <a class="btn btn--ghost btn--small" href="#" onclick="return false;">Google</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> AURORA. Tüm hakları saklıdır.</p>
+      <a class="toTop" href="#top">Yukarı ↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Kapat">×</button>
+    <img id="lightboxImg" alt="Büyük görsel">
+  </div>
+<script src="aurora_script.js"></script>
+</body>
+</html>
